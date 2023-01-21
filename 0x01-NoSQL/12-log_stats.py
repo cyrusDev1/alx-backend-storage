@@ -8,7 +8,7 @@ db = client.logs
 print("{} logs".format(db.nginx.count_documents({})))
 print("Methods:")
 for i in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
-    print("    method {}: {}".format(
+    print("\tmethod {}: {}".format(
         i, db.nginx.count_documents({"method": i})))
 print("{} status check".format(db.nginx.count_documents(
     {"method": "GET", "path": "/status"})))
